@@ -26,6 +26,14 @@
 				:classify="item.classify"
 			/>
 		</view>
+		
+		<view class="head">
+			<w-game-header
+				:video="game.video"
+				:poster="game.poster"
+				:images="game.images"
+			/>
+		</view>
 	</view>
 </template>
 
@@ -65,9 +73,22 @@
 					name: '幻境觉醒-任选满星万充',
 					classify: '卡牌 二次元',
 					desc: ['送满V', '领10W钻石', '赠2880W金币']
-				}]
+				}],
+				game: {
+					video: 'https://static.app.985sy.com/video/20220531104637.mp4',
+					poster: 'https://static.app.985sy.com/video/20220531104637.mp4?x-oss-process=video/snapshot,t_200,w_800',
+					images: [
+						'https://static.app.985sy.com/attachment/android/images/2205/16539652141.jpg!gameDetail_new',
+						'https://static.app.985sy.com/attachment/android/images/2205/16539652142.jpg!gameDetail_new',
+						'https://static.app.985sy.com/attachment/android/images/2205/16539652143.jpg!gameDetail_new',
+						'https://static.app.985sy.com/attachment/android/images/2205/16539652144.jpg!gameDetail_new',
+						'https://static.app.985sy.com/attachment/android/images/2205/16539652145.jpg!gameDetail_new'
+					]
+				}
 			};
-		}
+		},
+		
+		
 	}
 </script>
 
@@ -85,5 +106,8 @@
 		width: 100%;
 		padding: 0 20rpx;
 	}
+}
+.head {
+	padding: 20rpx;
 }
 </style>
