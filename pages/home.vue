@@ -1,6 +1,33 @@
 <template>
-	<view>
-		<view class="game-cell-list">
+	<w-layout className="home-page">
+		<w-card className="u-m-b-20">
+			<template slot="header">
+				<w-section title="礼包"></w-section>
+			</template>
+			<w-gift-cell
+				image='https://static.app.985sy.com/attachment/syapp/logo/202206061654505967.jpg!icon_128?v=10'
+				title="礼包"
+				content="3倍经验药水*1、下品灵石*20、 上品灵石*5(每个账号限领一次)"
+				time="2022-06-10 至 2025-05-06"
+				code="abcd"
+			></w-gift-cell>
+		</w-card>
+		
+		<w-ticket-cell
+			:style="{marginBottom: '20rpx'}"
+			title="代金券"
+			time="2022-03-10 ~ 2022-03-10"
+			name="少年名将-送巅峰阵容"
+			total="9999.00"
+			price="9999.00"
+			disabled
+			over
+		></w-ticket-cell>
+		
+		<w-card className="u-m-b-20">
+			<template slot="header">
+				<w-section title="热门游戏"></w-section>
+			</template>
 			<w-game-cell
 				v-for="item in games"
 				:key="item.id"
@@ -12,20 +39,26 @@
 				:bottomLabel="item.bottomLabel"
 				:bottomContent="item.bottomContent"
 				:bottomType="item.bottomType"
+				imageSize="160"
 				:style="{marginBottom: '20rpx'}"
 			/>
-		</view>
+		</w-card>
 		
-		<view class="game-item-list">
-			<w-game-item
-				v-for="item in games"
-				:key="item.id"
-				class="item"
-				:image="item.image"
-				:name="item.name"
-				:classify="item.classify"
-			/>
-		</view>
+		<w-card className="u-m-b-20">
+			<template slot="header">
+				<w-section title="精选游戏"></w-section>
+			</template>
+			<view class="game-item-list">
+				<w-game-item
+					v-for="item in games"
+					:key="item.id"
+					class="item"
+					:image="item.image"
+					:name="item.name"
+					:classify="item.classify"
+				/>
+			</view>
+		</w-card>
 		
 		<view class="head">
 			<w-game-header
@@ -34,7 +67,7 @@
 				:images="game.images"
 			/>
 		</view>
-	</view>
+	</w-layout>
 </template>
 
 <script>
@@ -93,21 +126,15 @@
 </script>
 
 <style lang="scss">
-.game-cell-list {
-	background-color: #fff;
-	padding: 20rpx 20rpx 0;
+.home-page {
+	padding: 20rpx;
 }
 .game-item-list {
-	margin-top: 40rpx;
 	display: flex;
 	flex-direction: row;
 	.item {
 		flex: 1;
 		width: 100%;
-		padding: 0 20rpx;
 	}
-}
-.head {
-	padding: 20rpx;
 }
 </style>

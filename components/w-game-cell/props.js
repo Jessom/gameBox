@@ -1,4 +1,7 @@
 export default {
+	className: {
+		type: String
+	},
 	// 游戏logo，不传则不显示
 	image: {
 		type: String
@@ -6,7 +9,7 @@ export default {
 	// logo图片大小(正方形)，默认140
 	imageSize: {
 		type: Number | String,
-		default: 130
+		default: 140
 	},
 	// 游戏名称，不传不显示
 	name: {

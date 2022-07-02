@@ -1,9 +1,10 @@
 <template>
-	<view class="w-game-cell" @click="$emit('click', null)">
+	<view class="w-game-cell" :class="className" @click="$emit('click', null)">
 		<u--image 
 			class="w-game-cell_image"
 			v-if="image"
 			:showLoading="true" 
+			:lazyLoad="true"
 			:src="image" 
 			:width="`${imageSize}rpx`" 
 			:height="`${imageSize}rpx`"
@@ -18,7 +19,7 @@
 			</view>
 			<view class="describe" v-if="describe.length">
 				<block v-for="(item, index) in describe" :key="index">
-					<text class="item" :class="`item${index}`">{{ item }}</text>
+					<text class="item" :class="'item' + index">{{ item }}</text>
 				</block>
 			</view>
 			<view class="bottom" :class="{'purple': bottomType != 1}" v-if="bottomLabel">

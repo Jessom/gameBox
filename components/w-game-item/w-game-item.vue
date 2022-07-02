@@ -4,6 +4,7 @@
 			class="w-game-item_image"
 			v-if="image"
 			:showLoading="true" 
+			:lazyLoad="true"
 			:src="image" 
 			:width="`${imageSize}rpx`" 
 			:height="`${imageSize}rpx`"
