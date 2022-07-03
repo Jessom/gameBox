@@ -1,5 +1,5 @@
 <template>
-	<view class="w-ticket-cell" :class="over ? 'over' : ''">
+	<view class="w-ticket-cell" :class="[over ? 'over' : '', className]">
 		<view class="w-ticket-cell_left">
 			<view class="">
 				<text class="small">¥</text>

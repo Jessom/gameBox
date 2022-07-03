@@ -1,6 +1,15 @@
 <template>
 	<view class="w-section">
-		<text class="text">{{ title }}</text>
+		<u--image 
+			class="w-section_image"
+			v-if="image"
+			:src="image"
+			:showLoading="true"
+			:lazyLoad="true"
+			height="17"
+			width="102"
+		></u--image>
+		<text class="text" v-else>{{ title }}</text>
 		
 		<view class="btn" v-if="more" @click="$emit('click', null)">
 			<text>{{ subtitle }}</text>
@@ -13,6 +22,10 @@
 export default {
 	name:"w-section",
 	props: {
+		image: {
+			type: String
+		},
+		
 		title: {
 			type: String
 		},
@@ -36,6 +49,9 @@ export default {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	&_image {
+		height: 34rpx;
+	}
 	.text {
 		font-size: 36rpx;
 		font-weight: bold;

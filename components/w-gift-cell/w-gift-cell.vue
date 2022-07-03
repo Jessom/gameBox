@@ -87,7 +87,7 @@ export default {
 		text-align: center;
 		font-size: 28rpx;
 		background-color: $theme;
-		color: #fff;
+		color: $btnColor;
 		&.disabled {
 			opacity: 0.6;
 		}

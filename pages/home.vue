@@ -13,8 +13,21 @@
 			></w-gift-cell>
 		</w-card>
 		
+		<w-message-cell
+			image="https://static.app.985sy.com/attachment/syapp/logo/202206061654505967.jpg!icon_128?v=10"
+			name="少年名将-送巅峰阵容"
+			account="watasi"
+			password="123456"
+			time="2022-07-02 12:32"
+			:gifts='[
+				{ packname: "独家礼包2（社区礼包）", giftCode: "VIP003" },
+				{ packname: "独家礼包1（入群礼包）", giftCode: "VIP002" },
+				{ packname: "至尊礼包", giftCode: "ZZ999" },
+			]'
+		></w-message-cell>
+		
 		<w-ticket-cell
-			:style="{marginBottom: '20rpx'}"
+			className="u-m-t-20 u-m-b-20"
 			title="代金券"
 			time="2022-03-10 ~ 2022-03-10"
 			name="少年名将-送巅峰阵容"
@@ -22,6 +35,7 @@
 			price="9999.00"
 			disabled
 			over
+			@used="onUsed"
 		></w-ticket-cell>
 		
 		<w-card className="u-m-b-20">
@@ -67,6 +81,8 @@
 				:images="game.images"
 			/>
 		</view>
+		
+		<w-ticket-used ref="ticketUsed"></w-ticket-used>
 	</w-layout>
 </template>
 
@@ -121,7 +137,12 @@
 			};
 		},
 		
-		
+		methods: {
+			onUsed() {
+				console.log(this.$refs.ticketUsed);
+				this.$refs.ticketUsed.show({"id":"203077","type":"1","name":"代金券","amount":"10.00","meet_amount":"0.00","start_time":"1652284800","end_time":"1683820799","use_type":"deduct","game_id":"8751","game_name":"修真世界-真地藏养龙","game_types":null,"total":"90000","surplus_total":"62226","received_total":"27774","vip_grades":"1,2,3,4,5","start_date":"2022-05-12 00:00:00","end_date":"2023-05-11 23:59:59","is_received":"1","vip_level":"0","vip_level_desc":""})
+			}
+		}
 	}
 </script>
 

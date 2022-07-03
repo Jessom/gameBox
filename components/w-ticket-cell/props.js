@@ -1,4 +1,7 @@
 export default {
+	className: {
+		type: String
+	},
 	// 代金券标题
 	title: {
 		type: String,
