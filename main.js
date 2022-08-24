@@ -10,7 +10,7 @@ Vue.config.productionTip = false
 App.mpType = 'app'
 
 // 路由拦截
-import './permission';
+// import './permission';
 
 const app = new Vue({
 	store,

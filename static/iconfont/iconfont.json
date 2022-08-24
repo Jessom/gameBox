@@ -1,0 +1,58 @@
+{
+  "id": "3607652",
+  "name": "趣玩-洁迅",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6150965",
+      "name": "gift",
+      "font_class": "gift",
+      "unicode": "e771",
+      "unicode_decimal": 59249
+    },
+    {
+      "icon_id": "6151070",
+      "name": "edit",
+      "font_class": "edit",
+      "unicode": "e7a0",
+      "unicode_decimal": 59296
+    },
+    {
+      "icon_id": "6151072",
+      "name": "dollar",
+      "font_class": "dollar",
+      "unicode": "e7a1",
+      "unicode_decimal": 59297
+    },
+    {
+      "icon_id": "6151146",
+      "name": "heart-fill",
+      "font_class": "heart-fill",
+      "unicode": "e7d1",
+      "unicode_decimal": 59345
+    },
+    {
+      "icon_id": "6151257",
+      "name": "headset",
+      "font_class": "headset",
+      "unicode": "e80b",
+      "unicode_decimal": 59403
+    },
+    {
+      "icon_id": "6151266",
+      "name": "like",
+      "font_class": "like",
+      "unicode": "e813",
+      "unicode_decimal": 59411
+    },
+    {
+      "icon_id": "6151273",
+      "name": "cog",
+      "font_class": "cog",
+      "unicode": "e818",
+      "unicode_decimal": 59416
+    }
+  ]
+}

@@ -8,11 +8,18 @@
 		},
 		onHide: function() {
 			console.log('App Hide')
+		},
+		globalData: {
+			channel: "",
+			btnShow: false,
+			qq: "",
+			email: ""
 		}
 	}
 </script>
 
 <style lang="scss">
 @import 'uview-ui/index.scss';
+@import './static/iconfont/iconfont.css';
 @import './common/scss/style.scss';
 </style>

@@ -17,7 +17,7 @@ uni.addInterceptor('navigateTo', {
 	invoke(e) {
 		let url = e.url.split("?")[0];
 		if (!hasPermission(url)) {
-			uni.reLaunch({
+			uni.navigateTo({
 				url: '/mine/login'
 			})
 			return false
@@ -30,7 +30,7 @@ uni.addInterceptor('navigateTo', {
 uni.addInterceptor('switchTab', {
 	invoke(e) {
 		if (!hasPermission(e.url)) {
-			uni.reLaunch({
+			uni.navigateTo({
 				url: '/mine/login'
 			})
 			return false

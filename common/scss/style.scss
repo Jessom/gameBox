@@ -1,2 +1,14 @@
+/* #ifdef H5 */
+page { background-color: #ededed; }
+/* #endif */
+
 .u-m-b-20 { margin-bottom: 20rpx; }
 .u-m-t-20 { margin-top: 20rpx; }
+.u-m-r-20 { margin-right: 20rpx; }
+.u-m-l-20 { margin-left: 20rpx; }
+
+/* 重写 u-view 样式 */
+.u-border-bottom, .u-line { border-color: #eee !important; }
+.cell-icon, .cell-title { font-size: 36rpx; }
+.u-cell__body { padding: 30rpx 15px; }
+.u-radio-group--row { flex-wrap: wrap; }

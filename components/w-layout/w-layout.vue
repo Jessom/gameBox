@@ -11,18 +11,12 @@ export default {
 		className: {
 			type: String
 		}
-	},
-	data() {
-		return {
-			
-		};
 	}
 }
 </script>
 
 <style lang="scss" scoped>
 .w-layout {
-	min-height: 100vh;
-	background-color: #f5f6f8;
+	background-color: $background;
 }
 </style>
