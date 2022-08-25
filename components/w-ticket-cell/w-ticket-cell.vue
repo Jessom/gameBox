@@ -134,7 +134,7 @@ export default {
 			height: $size;
 			position: absolute;
 			left: -$size / 2;
-			background-color: #f5f6f8;
+			background-color: $background;
 			border-radius: 50%;
 		}
 		&::before {

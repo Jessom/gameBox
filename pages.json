@@ -15,6 +15,20 @@
 			"enablePullDownRefresh": false,
 			"navigationBarBackgroundColor": "#ffffff"
 		}
+	}, {
+		"path": "pages/classify",
+		"style": {
+			"navigationBarTitleText": "分类",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/message",
+		"style": {
+			"navigationBarTitleText": "消息中心",
+			"enablePullDownRefresh": false
+		}
+
 	}],
 	"subPackages": [{
 		"root": "mine",
@@ -31,7 +45,8 @@
 				"path": "tickets",
 				"style": {
 					"navigationBarTitleText": "我的代金券",
-					"enablePullDownRefresh": false
+					"enablePullDownRefresh": false,
+					"navigationStyle": "custom"
 				}
 
 			}, {
@@ -86,6 +101,49 @@
 					"navigationBarBackgroundColor": "#fff"
 				}
 
+			}, {
+				"path": "nickname",
+				"style": {
+					"navigationBarTitleText": "设置昵称",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "destroyed",
+				"style": {
+					"navigationBarTitleText": "注销账号",
+					"enablePullDownRefresh": false,
+					"navigationBarBackgroundColor": "#ffffff"
+				}
+
+			}, {
+				"path": "password",
+				"style": {
+					"navigationBarTitleText": "修改密码",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "auth",
+				"style": {
+					"navigationBarTitleText": "实名认证",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "phone",
+				"style": {
+					"navigationBarTitleText": "绑定手机",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "nPhone",
+				"style": {
+					"navigationBarTitleText": "绑定手机",
+					"enablePullDownRefresh": false
+				}
+
 			}
 		]
 	}],
@@ -105,6 +163,16 @@
 			"iconPath": "static/images/tabbar/home.png",
 			"selectedIconPath": "static/images/tabbar/home_s.png",
 			"text": "首页"
+		}, {
+			"pagePath": "pages/classify",
+			"iconPath": "static/images/tabbar/home.png",
+			"selectedIconPath": "static/images/tabbar/home_s.png",
+			"text": "分类"
+		}, {
+			"pagePath": "pages/message",
+			"iconPath": "static/images/tabbar/home.png",
+			"selectedIconPath": "static/images/tabbar/home_s.png",
+			"text": "消息"
 		}, {
 			"pagePath": "pages/mine",
 			"iconPath": "static/images/tabbar/mine.png",

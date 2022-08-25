@@ -7,6 +7,11 @@ page { background-color: #ededed; }
 .u-m-r-20 { margin-right: 20rpx; }
 .u-m-l-20 { margin-left: 20rpx; }
 
+.foot-btn {
+	padding: 20rpx;
+	margin-top: 50rpx;
+}
+
 /* 重写 u-view 样式 */
 .u-border-bottom, .u-line { border-color: #eee !important; }
 .cell-icon, .cell-title { font-size: 36rpx; }
