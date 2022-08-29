@@ -1,6 +1,6 @@
 <template>
 	<w-layout className="mine-page">
-		<view class="mine-header u-border-bottom" @click="onNavigator({openType: 'navigator', url: '/mine/account'})">
+		<view class="mine-header u-border-bottom" @click="onNavigator({openType: 'navigator', url: '/mine/login'})">
 			<view class="avatar">
 				<u-avatar size="56" src=""></u-avatar>
 			</view>

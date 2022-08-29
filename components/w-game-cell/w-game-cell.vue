@@ -10,14 +10,14 @@
 			:height="`${imageSize}rpx`"
 		/>
 		<view class="w-game-cell_meta">
-			<view class="title" v-if="name">
+			<view class="title u-line-2" v-if="name">
 				<text class="label" v-if="label">{{ label }}</text>
 				<text class="name">{{ name }}</text>
 			</view>
 			<view class="u-line-1" v-if="classify">
 				<text class="classify">{{ classify }}</text>
 			</view>
-			<view class="describe" v-if="describe.length">
+			<view class="describe u-line-1" v-if="describe.length">
 				<block v-for="(item, index) in describe" :key="index">
 					<text class="item" :class="'item' + index">{{ item }}</text>
 				</block>

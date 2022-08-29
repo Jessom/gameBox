@@ -38,7 +38,19 @@
 				"path": "login",
 				"style": {
 					"navigationBarTitleText": "登录",
-					"enablePullDownRefresh": false
+					"enablePullDownRefresh": false,
+					"app-plus": {
+						"animationType": "slide-in-bottom",
+						"titleNView": {
+							"autoBackButton": false,
+							"buttons": [
+								{
+									"float": "left",
+									"type": "close"
+								}
+							]
+						}
+					}
 				}
 
 			}, {

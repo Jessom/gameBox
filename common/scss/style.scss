@@ -17,3 +17,52 @@ page { background-color: #ededed; }
 .cell-icon, .cell-title { font-size: 36rpx; }
 .u-cell__body { padding: 30rpx 15px; }
 .u-radio-group--row { flex-wrap: wrap; }
+
+.login-form {
+	margin-top: 120rpx;
+	.login-form-item {
+		background-color: #fff;
+		border-radius: 44px;
+		padding: 0 20px;
+		box-sizing: border-box;
+		margin-bottom: 40rpx;
+	}
+	.login-form-input {}
+}
+.login-footer {
+	text-align: center;
+	font-size: 30rpx;
+	color: $u-content-color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.text {
+		color: $theme;
+	}
+	.circle {
+		$size: 26rpx;
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		border: 1px solid $u-content-color;
+		margin-right: 8rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&::after {
+			content: "";
+			width: $size - 10;
+			height: $size - 10;
+			border-radius: 50%;
+		}
+		&.actived {
+			border-color: $theme;
+			&::after {
+				background-color: $theme;
+			}
+		}
+	}
+}
+.login-btn {
+	margin-top: 80rpx;
+}
