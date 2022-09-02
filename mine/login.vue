@@ -15,11 +15,11 @@
 		<u-button type="primary" class="login-btn" :disabeld="!form.mobile && !form.code" @click="onSubmit" shape="circle">登录</u-button>
 		
 		<template slot="footer">
-			<view class="login-footer" @click="checked = !checked">
-				<text class="circle" :class="checked ? 'actived' : ''"></text>
-				<text>登录即代表您同意</text>
-				<text class="text">《用户协议》</text>
-				<text class="text">《隐私政策》</text>
+			<view class="login-footer">
+				<text class="circle" :class="checked ? 'actived' : ''" @click="checked = !checked"></text>
+				<text @click="checked = !checked">登录即代表您同意</text>
+				<text class="text" @click="onNavigator('/mine/argument')">《用户协议》</text>
+				<text class="text" @click="onNavigator('/mine/private')">《隐私政策》</text>
 			</view>
 		</template>
 		
@@ -48,6 +48,11 @@ export default {
 	},
 	
 	methods: {
+		onNavigator(url) {
+			uni.navigateTo({
+				url
+			})
+		},
 		async onSubmit() {
 			if(!this.validate(true)) return
 			

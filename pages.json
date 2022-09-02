@@ -13,7 +13,8 @@
 		"style": {
 			"navigationBarTitleText": "",
 			"enablePullDownRefresh": false,
-			"navigationBarBackgroundColor": "#ffffff"
+			"navigationBarBackgroundColor": "#ffffff",
+			"backgroundColor": "#ffffff"
 		}
 	}, {
 		"path": "pages/classify",
@@ -38,6 +39,7 @@
 				"path": "login",
 				"style": {
 					"navigationBarTitleText": "登录",
+					"backgroundColor": "#ededed",
 					"enablePullDownRefresh": false,
 					"app-plus": {
 						"animationType": "slide-in-bottom",

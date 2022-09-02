@@ -44,6 +44,7 @@ export default {
 	padding-top: 140rpx;
 	position: relative;
 	box-sizing: border-box;
+	background-color: $background;
 	
 	.body {
 		width: 100%;

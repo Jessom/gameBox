@@ -79,6 +79,8 @@ export default {
 
 <style lang="scss">
 .mine-page {
+	height: 100vh;
+	background-color: $background;
 	.mine-header {
 		padding: 50rpx 20rpx;
 		background-color: #fff;

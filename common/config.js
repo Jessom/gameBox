@@ -7,7 +7,7 @@ export default {
 	// #ifdef H5
 	baseUrl: '',
 	// #endif
-	// #ifdef H5
+	// #ifndef H5
 	baseUrl: 'https://api.gamebox.i52wan.com',
 	// #endif
 	
