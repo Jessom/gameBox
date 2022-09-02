@@ -10,7 +10,7 @@
 			console.log('App Hide')
 		},
 		globalData: {
-			channel: "",
+			channel: "43iq",
 			btnShow: false,
 			qq: "",
 			email: ""

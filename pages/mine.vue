@@ -1,13 +1,13 @@
 <template>
 	<w-layout className="mine-page">
-		<view class="mine-header u-border-bottom" @click="onNavigator({openType: 'navigator', url: '/mine/login'})">
+		<view class="mine-header u-border-bottom" @click="onNavigator({openType: 'navigator', url: '/mine/account'})">
 			<view class="avatar">
-				<u-avatar size="56" src=""></u-avatar>
+				<u-avatar size="56" :src="userInfo ? userInfo.icon_link : ''"></u-avatar>
 			</view>
 			<view class="mine-meta">
-				<view class="title"><text>点击登录</text></view>
-				<view class="subtitle"><text>账号：watasi</text></view>
-				<view class="subtitle"><text>手机：153****9847</text></view>
+				<view class="title"><text>{{ userInfo ? userInfo.nick_name : "点击登录" }}</text></view>
+				<view class="subtitle" v-if="userInfo"><text>账号：{{ userInfo.member_name }}</text></view>
+				<view class="subtitle" v-if="userInfo"><text>手机：{{ userInfo.mobile }}</text></view>
 			</view>
 			<u-icon name="arrow-right" size="24" color="rgba(0,0,0,0.2)"></u-icon>
 		</view>
@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
 	data() {
 		return {
@@ -44,6 +45,12 @@ export default {
 				{ title: '设置', color: "#1ba7ff", icon: 'icon-cog', url: '/mine/setting', openType: 'navigator' }
 			]]
 		};
+	},
+	
+	computed: {
+		...mapState({
+			userInfo: state => state.userInfo
+		})
 	},
 	
 	methods: {

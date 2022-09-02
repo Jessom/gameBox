@@ -1,6 +1,9 @@
 // 页面白名单
 const whiteList = [
 	'/mine/login',
+	'/pages/home',
+	'/pages/classify',
+	'/pages/mine'
 ]
 
 function hasPermission(url) {

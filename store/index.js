@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import modules from './modules.js'
-
-import { testApi } from '@/common/apis/test.js'
+import { getMemberInfo } from '@/common/apis/user.api.js'
 
 Vue.use(Vuex) // vue的插件机制
 
@@ -16,7 +15,7 @@ try {
 }
 
 // 需要永久存储，且下次APP启动需要取出的，在state中的变量名
-let saveStateKeys = ['token', 'uid', 'userInfo'];
+let saveStateKeys = ['token', 'userInfo', 'username', 'member_id'];
 
 // 保存变量到本地存储中
 const saveLifeData = function(key, value) {
@@ -35,14 +34,15 @@ const saveLifeData = function(key, value) {
 // Vuex.Store 构造器选项
 const store = new Vuex.Store({
 	modules: modules,
-	
-    // 为了不和页面或组件的data中的造成混淆，state中的变量前面建议加上$符号
-    state: {
+
+	// 为了不和页面或组件的data中的造成混淆，state中的变量前面建议加上$符号
+	state: {
 		token: lifeData.token || '',
-		uid: lifeData.uid || '',
-		userInfo: lifeData.userInfo || {},
-    },
-	
+		userInfo: lifeData.userInfo || null,
+		username: "",
+		member_id: "",
+	},
+
 	mutations: {
 		save(state, payload) {
 			Object.keys(payload).map(saveKey => {
@@ -51,12 +51,17 @@ const store = new Vuex.Store({
 			})
 		}
 	},
-	
+
 	actions: {
-		async testApi({ commit }, params) {
-			const res = await testApi(params)
-			return res
-		},
+		// 获取用户信息
+		async getMemberInfo({ commit }, params) {
+			const res = await getMemberInfo(params)
+			commit('save', {
+				userInfo: res.data.member_info,
+				username: res.data.member_name,
+				member_id: res.data.member_id,
+			})
+		}
 	}
 })
 
