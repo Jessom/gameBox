@@ -39,8 +39,8 @@ const store = new Vuex.Store({
 	state: {
 		token: lifeData.token || '',
 		userInfo: lifeData.userInfo || null,
-		username: "",
-		member_id: "",
+		username: lifeData.username || "",
+		member_id: lifeData.member_id || "",
 	},
 
 	mutations: {
@@ -58,8 +58,8 @@ const store = new Vuex.Store({
 			const res = await getMemberInfo(params)
 			commit('save', {
 				userInfo: res.data.member_info,
-				username: res.data.member_name,
-				member_id: res.data.member_id,
+				username: res.data.member_info.member_name,
+				member_id: res.data.member_info.member_id,
 			})
 		}
 	}

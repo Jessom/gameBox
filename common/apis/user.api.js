@@ -17,6 +17,15 @@ export const getMemberInfo = (params) => uni.$u.http.post(`${config.baseUrl}/use
 export const login = (params) => uni.$u.http.post(`${config.baseUrl}/user/user/login`, params)
 
 /**
+ * 注册
+ * @params params
+ * @params params.password
+ * @params params.username
+ * @params params.regtype	5
+ */
+export const register = (params) => uni.$u.http.post(`${config.baseUrl}/user/user/register`, params)
+
+/**
  * 修改用户信息
  * @params params
  * @params params.member_id

@@ -1,8 +1,16 @@
 @font-face {
   font-family: "iconfont";
+  /* #ifdef H5 */
+  src: url('/iconfont/iconfont.woff2?t=1661311782162') format('woff2'),
+       url('/iconfont/iconfont.woff?t=1661311782162') format('woff'),
+       url('/iconfont/iconfont.ttf?t=1661311782162') format('truetype');
+  /* #endif */
+  
+  /* #ifndef H5 */
   src: url('https://proxy.youquyx.com/iconfont/iconfont.woff2?t=1661311782162') format('woff2'),
        url('https://proxy.youquyx.com/iconfont/iconfont.woff?t=1661311782162') format('woff'),
        url('https://proxy.youquyx.com/iconfont/iconfont.ttf?t=1661311782162') format('truetype');
+  /* #endif */
 }
 
 .iconfont {

@@ -17,7 +17,7 @@
 		</block>
 		
 		<u-cell-group class="u-m-b-20" :border="false" :customStyle="{background: '#fff'}">
-			<u-cell>
+			<u-cell @click="logout">
 				<view slot="title" class="logout cell-title">退出登录</view>
 			</u-cell>
 		</u-cell-group>
@@ -53,6 +53,24 @@ export default {
 			} else if(it.switch) {
 				uni.setStorageSync('__push', Number(this.checked))
 			}
+		},
+		
+		logout() {
+			uni.showModal({
+				title: '提示',
+				content: '确定退出登录吗？',
+				success: (e) => {
+					if(e.confirm) {
+						this.$store.commit('save', {
+							userInfo: null,
+							username: "",
+							member_id: "",
+							token: ""
+						})
+						uni.navigateBack()
+					}
+				}
+			})
 		}
 	}
 }

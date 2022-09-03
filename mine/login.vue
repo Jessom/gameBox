@@ -12,7 +12,11 @@
 			</u-form-item>
 		</u--form>
 		
+		<view class="login-tips">未注册的用户可直接注册登录</view>
+		
 		<u-button type="primary" class="login-btn" :disabeld="!form.mobile && !form.code" @click="onSubmit" shape="circle">登录</u-button>
+		
+		<view class="login-small-btn" @click="onNavigator('/mine/pwdlogin')">密码登录</view>
 		
 		<template slot="footer">
 			<view class="login-footer">
@@ -102,6 +106,10 @@ export default {
 
 <style lang="scss">
 .login-page {
-	
+	.login-tips {
+		text-align: center;
+		color: $u-tips-color;
+		font-size: 32rpx;
+	}
 }
 </style>

@@ -1,6 +1,9 @@
 // 页面白名单
 const whiteList = [
+	'/',
 	'/mine/login',
+	'/mine/pwdlogin',
+	'/mine/register',
 	'/mine/argument',
 	'/mine/private',
 	'/pages/home',

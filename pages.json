@@ -45,12 +45,10 @@
 						"animationType": "slide-in-bottom",
 						"titleNView": {
 							"autoBackButton": false,
-							"buttons": [
-								{
-									"float": "left",
-									"type": "close"
-								}
-							]
+							"buttons": [{
+								"float": "left",
+								"type": "close"
+							}]
 						}
 					}
 				}
@@ -155,6 +153,22 @@
 				"path": "nPhone",
 				"style": {
 					"navigationBarTitleText": "绑定手机",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "pwdlogin",
+				"style": {
+					"navigationBarTitleText": "密码登录",
+					"backgroundColor": "#ededed",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "register",
+				"style": {
+					"navigationBarTitleText": "注册账号",
+					"backgroundColor": "#ededed",
 					"enablePullDownRefresh": false
 				}
 

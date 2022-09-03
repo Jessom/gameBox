@@ -64,5 +64,13 @@ page { background-color: #ededed; }
 	}
 }
 .login-btn {
-	margin-top: 80rpx;
+	margin-top: 60rpx;
+}
+.login-small-btn {
+	text-align: right;
+	color: $u-tips-color;
+	margin-top: 10rpx;
+	padding-top: 20rpx;
+	padding-bottom: 10rpx;
+	font-size: 32rpx;
 }
